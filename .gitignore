@@ -1,0 +1,59 @@
+# ── Dependencies ─────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ── Secrets ──────────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# ── Backend runtime state ────────────────────────────────────────────────────
+backend/data/
+
+# ── Next.js ──────────────────────────────────────────────────────────────────
+.next/
+out/
+build/
+!circuits/build/
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# ── Circuit build ────────────────────────────────────────────────────────────
+# The four artifacts the README lists as committed are kept:
+#   derived_ownership.r1cs, derived_ownership_js/, derived_ownership_0001.zkey,
+#   verification_key.json
+# These are large, regenerable trusted-setup intermediates — rebuild with
+# circuits/scripts/compile.sh
+circuits/build/*.ptau
+circuits/build/derived_ownership_0000.zkey
+circuits/bin/
+
+# ── Contracts (Hardhat/Foundry, once added) ──────────────────────────────────
+artifacts/
+cache/
+typechain-types/
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ── Editors / OS ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# ── Hardhat deploy record is committed; local artifacts are not ──────────────
+contracts/deployments.*.local.json
+
+# Any env file except the templates. The second rule matters: `.env.example`
+# alone does not match `.env.local.example`, so that template was being ignored.
+.env*
+!.env*.example
