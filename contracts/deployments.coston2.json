@@ -1,0 +1,8 @@
+{
+  "network": "coston2",
+  "chainId": 114,
+  "deployer": "0xf00469D25A4FE2a068837F650370d653B20601B9",
+  "DerivedRegistry": "0xd7931Df30821100BC7C9c161a691bCD70994B6AC",
+  "ZKVerifier": "0x729991fBE0Fb0f0caF6E5b6Df39e85d416202bFa",
+  "deployedAt": "2026-08-05T08:28:56.161Z"
+}
